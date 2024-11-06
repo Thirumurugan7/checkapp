@@ -13,7 +13,7 @@ export default function Home() {
 
   const search = searchParams.get('r')
 
-  const playerUrl = search ? `https://checkapp.vercel.app/r=${r}` : '';
+  const playerUrl = search ? `https://checkapp.vercel.app/r=${search}` : '';
 
 
   return (
