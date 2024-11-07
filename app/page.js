@@ -14,7 +14,7 @@ export default function Home() {
 
   const search = searchParams.get('r')
 
-  const playerUrl = search ? `https://checkapp.vercel.app/r=${search}` : '';
+  const playerUrl = search ? `https://mintwink.vercel.app/r=${search}` : '';
 
 
   return (
