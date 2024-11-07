@@ -5,6 +5,7 @@ import { useSearchParams } from 'next/navigation'
 import { Helmet } from 'react-helmet';
 
 import Image from "next/image";
+import { Suspense } from 'react'
 
 export default function Home() {
   const router = useRouter()
@@ -18,6 +19,7 @@ export default function Home() {
 
   return (
     <>
+     <Suspense>
     <Helmet>
       <meta name="twitter:card" content="player" />
       <meta name="twitter:title" content="Minting Wink" />
@@ -39,6 +41,8 @@ export default function Home() {
         Example: <code>{playerUrl}</code>
       </p>
     </div>
+    </Suspense>
+
   </>
   );
 }
