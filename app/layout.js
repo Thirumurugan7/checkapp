@@ -1,6 +1,7 @@
 "use client"
 import localFont from "next/font/local";
 import { Helmet } from 'react-helmet';
+import { Suspense } from 'react'
 
 
 import "./globals.css";
@@ -25,6 +26,7 @@ const geistMono = localFont({
 
 export default function RootLayout({ children }) {
   return (
+    <Suspense>
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
@@ -32,5 +34,6 @@ export default function RootLayout({ children }) {
         {children}
       </body>
     </html>
+    </Suspense>
   );
 }
